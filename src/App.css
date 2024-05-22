@@ -1,38 +1,112 @@
-.App {
+/* General styling for the main container */
+
+.main {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(to right, #f69077, #f3b585);
+  color: black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
+  font-family: 'Arial', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Styling for the main header */
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Styling for the input container */
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-text {
+  width: 70%;
+  padding: 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.copy-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff745c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.copy-button:hover {
+  background-color: #ff6b4a;
+}
+
+/* Styling for the controls */
+.controls {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+  gap: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.control {
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.input-range {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .main {
+    width: 90%;
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .input-container {
+    flex-direction: column;
   }
+
+  .input-text {
+    width: 100%;
+    margin-bottom: 10px;
+    
+  }
+
+  .copy-button {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .controls {
+    align-items: center;
+  }
+
+  .input-range {
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+ .main{
+  padding: 10px;
+ } 
+
+ 
 }
